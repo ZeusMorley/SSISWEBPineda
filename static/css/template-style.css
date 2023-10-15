@@ -97,8 +97,8 @@ a.text-tag:link {
   padding: 6px 9px;
 }
 a.text-tag:link:hover {
-  background: #002633 none repeat scroll 0 0;
-  border: 1px solid #002633;
+  background: #213716 none repeat scroll 0 0;
+  border: 1px solid #213716;
   color: #fff;
   transition: all 0.20s linear 0s;
   -o-transition: all 0.20s linear 0s;
@@ -160,41 +160,41 @@ td {border-right:1px solid #fff;}
 .primary-color-white .background-primary-hightlight .top-nav .active-item > a, .primary-color-white .background-primary-hightlight .top-nav li a:hover, .primary-color-white .background-primary-hightlight .aside-nav li a:hover, 
 .primary-color-white .background-primary-hightlight .aside-nav > ul > li.active-item > a:link, .primary-color-white .background-primary-hightlight .aside-nav > ul > li.active-item > a:visited {
   background: #fff none repeat scroll 0 0;
-  color: #002633;
+  color: #213716;
 }
-.background-orange-hightlight .top-nav .active-item > a, .background-orange-hightlight .top-nav li a:hover, .background-orange-hightlight .aside-nav li a:hover, 
-.background-orange-hightlight .aside-nav > ul > li.active-item > a:link, .background-orange-hightlight .aside-nav > ul > li.active-item > a:visited,
-.primary-color-orange .background-primary-hightlight .top-nav .active-item > a, .primary-color-orange .background-primary-hightlight .top-nav li a:hover, .primary-color-orange .background-primary-hightlight .aside-nav li a:hover, 
-.primary-color-orange .background-primary-hightlight .aside-nav > ul > li.active-item > a:link, .primary-color-orange .background-primary-hightlight .aside-nav > ul > li.active-item > a:visited {
-  background: #E4A600 none repeat scroll 0 0;
+.background-color3-hightlight .top-nav .active-item > a, .background-color3-hightlight .top-nav li a:hover, .background-color3-hightlight .aside-nav li a:hover, 
+.background-color3-hightlight .aside-nav > ul > li.active-item > a:link, .background-color3-hightlight .aside-nav > ul > li.active-item > a:visited,
+.primary-color-color3 .background-primary-hightlight .top-nav .active-item > a, .primary-color-color3 .background-primary-hightlight .top-nav li a:hover, .primary-color-color3 .background-primary-hightlight .aside-nav li a:hover, 
+.primary-color-color3 .background-primary-hightlight .aside-nav > ul > li.active-item > a:link, .primary-color-color3 .background-primary-hightlight .aside-nav > ul > li.active-item > a:visited {
+  background: #97a57f none repeat scroll 0 0;
   color: #fff;
 }
-.background-red-hightlight .top-nav .active-item > a, .background-red-hightlight .top-nav li a:hover, .background-red-hightlight .aside-nav li a:hover, 
-.background-red-hightlight .aside-nav > ul > li.active-item > a:link, .background-red-hightlight .aside-nav > ul > li.active-item > a:visited,
-.primary-color-red .background-primary-hightlight .top-nav .active-item > a, .primary-color-red .background-primary-hightlight .top-nav li a:hover, .primary-color-red .background-primary-hightlight .aside-nav li a:hover, 
-.primary-color-red .background-primary-hightlight .aside-nav > ul > li.active-item > a:link, .primary-color-red .background-primary-hightlight .aside-nav > ul > li.active-item > a:visited {
-  background: #C81010 none repeat scroll 0 0;
+.background-color1-hightlight .top-nav .active-item > a, .background-color1-hightlight .top-nav li a:hover, .background-color1-hightlight .aside-nav li a:hover, 
+.background-color1-hightlight .aside-nav > ul > li.active-item > a:link, .background-color1-hightlight .aside-nav > ul > li.active-item > a:visited,
+.primary-color-color1 .background-primary-hightlight .top-nav .active-item > a, .primary-color-color1 .background-primary-hightlight .top-nav li a:hover, .primary-color-color1 .background-primary-hightlight .aside-nav li a:hover, 
+.primary-color-color1 .background-primary-hightlight .aside-nav > ul > li.active-item > a:link, .primary-color-color1 .background-primary-hightlight .aside-nav > ul > li.active-item > a:visited {
+  background: #B3A75E none repeat scroll 0 0;
   color: #fff;
 }
-.background-blue-hightlight .top-nav .active-item > a, .background-blue-hightlight .top-nav li a:hover, .background-blue-hightlight .aside-nav li a:hover, 
-.background-blue-hightlight .aside-nav > ul > li.active-item > a:link, .background-blue-hightlight .aside-nav > ul > li.active-item > a:visited,
-.primary-color-blue .background-primary-hightlight .top-nav .active-item > a, .primary-color-blue .background-primary-hightlight .top-nav li a:hover, .primary-color-blue .background-primary-hightlight .aside-nav li a:hover, 
-.primary-color-blue .background-primary-hightlight .aside-nav > ul > li.active-item > a:link, .primary-color-blue .background-primary-hightlight .aside-nav > ul > li.active-item > a:visited {
-  background: #005881 none repeat scroll 0 0;
+.background-color2-hightlight .top-nav .active-item > a, .background-color2-hightlight .top-nav li a:hover, .background-color2-hightlight .aside-nav li a:hover, 
+.background-color2-hightlight .aside-nav > ul > li.active-item > a:link, .background-color2-hightlight .aside-nav > ul > li.active-item > a:visited,
+.primary-color-color2 .background-primary-hightlight .top-nav .active-item > a, .primary-color-color2 .background-primary-hightlight .top-nav li a:hover, .primary-color-color2 .background-primary-hightlight .aside-nav li a:hover, 
+.primary-color-color2 .background-primary-hightlight .aside-nav > ul > li.active-item > a:link, .primary-color-color2 .background-primary-hightlight .aside-nav > ul > li.active-item > a:visited {
+  background: #425c37 none repeat scroll 0 0;
   color: #fff;
 } 
-.background-aqua-hightlight .top-nav .active-item > a, .background-aqua-hightlight .top-nav li a:hover, .background-aqua-hightlight .aside-nav li a:hover, 
-.background-aqua-hightlight .aside-nav > ul > li.active-item > a:link, .background-aqua-hightlight .aside-nav > ul > li.active-item > a:visited,
-.primary-color-aqua .background-primary-hightlight .top-nav .active-item > a, .primary-color-aqua .background-primary-hightlight .top-nav li a:hover, .primary-color-aqua .background-primary-hightlight .aside-nav li a:hover, 
-.primary-color-aqua .background-primary-hightlight .aside-nav > ul > li.active-item > a:link, .primary-color-aqua .background-primary-hightlight .aside-nav > ul > li.active-item > a:visited {
-  background: #00B5A6 none repeat scroll 0 0;
+.background-color4-hightlight .top-nav .active-item > a, .background-color4-hightlight .top-nav li a:hover, .background-color4-hightlight .aside-nav li a:hover, 
+.background-color4-hightlight .aside-nav > ul > li.active-item > a:link, .background-color4-hightlight .aside-nav > ul > li.active-item > a:visited,
+.primary-color-color4 .background-primary-hightlight .top-nav .active-item > a, .primary-color-color4 .background-primary-hightlight .top-nav li a:hover, .primary-color-color4 .background-primary-hightlight .aside-nav li a:hover, 
+.primary-color-color4 .background-primary-hightlight .aside-nav > ul > li.active-item > a:link, .primary-color-color4 .background-primary-hightlight .aside-nav > ul > li.active-item > a:visited {
+  background: #4f6540 none repeat scroll 0 0;
   color: #fff;
 }
-.background-dark-hightlight .top-nav .active-item > a, .background-dark-hightlight .top-nav li a:hover, .background-dark-hightlight .aside-nav li a:hover, 
-.background-dark-hightlight .aside-nav > ul > li.active-item > a:link, .background-dark-hightlight .aside-nav > ul > li.active-item > a:visited,
-.primary-color-dark .background-primary-hightlight .top-nav .active-item > a, .primary-color-dark .background-primary-hightlight .top-nav li a:hover, .primary-color-dark .background-primary-hightlight .aside-nav li a:hover, 
-.primary-color-dark .background-primary-hightlight .aside-nav > ul > li.active-item > a:link, .primary-color-dark .background-primary-hightlight .aside-nav > ul > li.active-item > a:visited {
-  background: #002633 none repeat scroll 0 0;
+.background-color5-hightlight .top-nav .active-item > a, .background-color5-hightlight .top-nav li a:hover, .background-color5-hightlight .aside-nav li a:hover, 
+.background-color5-hightlight .aside-nav > ul > li.active-item > a:link, .background-color5-hightlight .aside-nav > ul > li.active-item > a:visited,
+.primary-color-color5 .background-primary-hightlight .top-nav .active-item > a, .primary-color-color5 .background-primary-hightlight .top-nav li a:hover, .primary-color-color5 .background-primary-hightlight .aside-nav li a:hover, 
+.primary-color-color5 .background-primary-hightlight .aside-nav > ul > li.active-item > a:link, .primary-color-color5 .background-primary-hightlight .aside-nav > ul > li.active-item > a:visited {
+  background: #213716 none repeat scroll 0 0;
   color: #fff;
 }
 .background-none {
@@ -208,7 +208,7 @@ video {
 
 /* Top Nav */
 .top-nav li a, .background-white .top-nav li a {
-  color: #002633;
+  color: #213716;
   font-size: 0.85rem;
   padding: 0.7em 1.25em;
 }
@@ -220,7 +220,7 @@ nav {
   z-index: 2;
 }  
 .top-nav ul ul {
-  background: #002633 none repeat scroll 0 0;
+  background: #213716 none repeat scroll 0 0;
 }
 .top-nav li ul li {
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
@@ -229,7 +229,7 @@ nav {
   border-bottom: 0;
 }
 .top-nav li ul li a, .background-white .top-nav li ul li a, .top-nav .active-item li a {
-  background: #002633 none repeat scroll 0 0;
+  background: #213716 none repeat scroll 0 0;
   color: rgba(255,255,255, 0.75);
 }
 ul.chevron .submenu > a::after, ul.chevron .sub-submenu > a::after, ul.chevron .aside-submenu > a::after, ul.chevron .aside-sub-submenu > a::after {
@@ -249,68 +249,68 @@ ul.chevron .submenu > a::after, ul.chevron .sub-submenu > a::after, ul.chevron .
 .background-white, .background-white p, a.background-white, .background-white a, .background-white a:link, .background-white a:visited, .background-white a:hover, .background-white a:active {
   color: #777;
 } 
-.background-dark, .background-dark p, a.background-dark, a.background-dark:visited, a.background-dark:link, .background-dark a, .background-dark a:link, .background-dark a:visited, .background-dark a:hover, .background-dark a:active,
-.primary-color-dark .background-primary, .primary-color-dark .background-primary p, .primary-color-dark a.background-primary, .primary-color-dark a.background-primary:visited, .primary-color-dark a.background-primary:link, .primary-color-dark a.background-primary:visited, .primary-color-dark .background-primary a, .primary-color-dark .background-primary a:link, .primary-color-dark .background-primary a:visited, .primary-color-dark .background-primary a:hover, .primary-color-dark .background-primary a:active {
+.background-color5, .background-color5 p, a.background-color5, a.background-color5:visited, a.background-color5:link, .background-color5 a, .background-color5 a:link, .background-color5 a:visited, .background-color5 a:hover, .background-color5 a:active,
+.primary-color-color5 .background-primary, .primary-color-color5 .background-primary p, .primary-color-color5 a.background-primary, .primary-color-color5 a.background-primary:visited, .primary-color-color5 a.background-primary:link, .primary-color-color5 a.background-primary:visited, .primary-color-color5 .background-primary a, .primary-color-color5 .background-primary a:link, .primary-color-color5 .background-primary a:visited, .primary-color-color5 .background-primary a:hover, .primary-color-color5 .background-primary a:active {
   color: #7697A2;
 }
 .background-white h1, .background-white h2, .background-white h3, .background-white h4, .background-white h5, .background-white h6,
 .background-white .h1, .background-white .h2, .background-white .h3, .background-white .h4, .background-white .h5, .background-white .h6, 
 .primary-color-white .background-primary h1, .primary-color-white .background-primary h2, .primary-color-white .background-primary h3, .primary-color-white .background-primary h4, .primary-color-white .background-primary h5, .primary-color-white .background-primary h6,
 .primary-color-white .background-primary .h1, .primary-color-white .background-primary .h2, .primary-color-white .background-primary .h3, .primary-color-white .background-primary .h4, .primary-color-white .background-primary .h5, .primary-color-white .background-primary .h6 {
-  color: #002633;
+  color: #213716;
 } 
 .image-hover-overlay-content *,
-.background-orange, .background-orange p, a.background-orange, a.background-orange:visited, a.background-orange:link, .background-orange a, .background-orange a:link, .background-orange a:visited, .background-orange a:hover, .background-orange a:active,
-.primary-color-orange .background-primary, .primary-color-orange .background-primary p, .primary-color-orange a.background-primary, .primary-color-orange a.background-primary:visited, .primary-color-orange a.background-primary:link, .primary-color-orange .background-primary a, .primary-color-orange .background-primary a:link, .primary-color-orange .background-primary a:visited, .primary-color-orange .background-primary a:hover, .primary-color-orange .background-primary a:active,
-.background-red, .background-red p, a.background-red, a.background-red:visited, a.background-red:link, .background-red a, .background-red a:link, .background-red a:visited, .background-red a:hover, .background-red a:active,
-.primary-color-red .background-primary, .primary-color-red .background-primary p, .primary-color-red a.background-primary, .primary-color-red a.background-primary:visited, .primary-color-red a.background-primary:link, .primary-color-red .background-primary a, .primary-color-red .background-primary a:link, .primary-color-red .background-primary a:visited, .primary-color-red .background-primary a:hover, .primary-color-red .background-primary a:active,
-.background-blue, .background-blue p, a.background-blue, a.background-blue:visited, a.background-blue:link, .background-blue a, .background-blue a:link, .background-blue a:visited, .background-blue a:hover, .background-blue a:active,
-.primary-color-blue .background-primary, .primary-color-blue .background-primary p, .primary-color-blue a.background-primary, .primary-color-blue a.background-primary:visited, .primary-color-blue a.background-primary:link, .primary-color-blue .background-primary a, .primary-color-blue .background-primary a:link, .primary-color-blue .background-primary a:visited, .primary-color-blue .background-primary a:hover, .primary-color-blue .background-primary a:active,
-.background-aqua, .background-aqua p, a.background-aqua, a.background-aqua:visited, a.background-aqua:link, .background-aqua a, .background-aqua a:link, .background-aqua a:visited, .background-aqua a:hover, .background-aqua a:active, 
-.primary-color-aqua .background-primary, .primary-color-aqua .background-primary p, .primary-color-aqua a.background-primary, .primary-color-aqua a.background-primary:visited, .primary-color-aqua a.background-primary:link, .primary-color-aqua .background-primary a, .primary-color-aqua .background-primary a:link, .primary-color-aqua .background-primary a:visited, .primary-color-aqua .background-primary a:hover, .primary-color-aqua .background-primary a:active {
+.background-color3, .background-color3 p, a.background-color3, a.background-color3:visited, a.background-color3:link, .background-color3 a, .background-color3 a:link, .background-color3 a:visited, .background-color3 a:hover, .background-color3 a:active,
+.primary-color-color3 .background-primary, .primary-color-color3 .background-primary p, .primary-color-color3 a.background-primary, .primary-color-color3 a.background-primary:visited, .primary-color-color3 a.background-primary:link, .primary-color-color3 .background-primary a, .primary-color-color3 .background-primary a:link, .primary-color-color3 .background-primary a:visited, .primary-color-color3 .background-primary a:hover, .primary-color-color3 .background-primary a:active,
+.background-color1, .background-color1 p, a.background-color1, a.background-color1:visited, a.background-color1:link, .background-color1 a, .background-color1 a:link, .background-color1 a:visited, .background-color1 a:hover, .background-color1 a:active,
+.primary-color-color1 .background-primary, .primary-color-color1 .background-primary p, .primary-color-color1 a.background-primary, .primary-color-color1 a.background-primary:visited, .primary-color-color1 a.background-primary:link, .primary-color-color1 .background-primary a, .primary-color-color1 .background-primary a:link, .primary-color-color1 .background-primary a:visited, .primary-color-color1 .background-primary a:hover, .primary-color-color1 .background-primary a:active,
+.background-color2, .background-color2 p, a.background-color2, a.background-color2:visited, a.background-color2:link, .background-color2 a, .background-color2 a:link, .background-color2 a:visited, .background-color2 a:hover, .background-color2 a:active,
+.primary-color-color2 .background-primary, .primary-color-color2 .background-primary p, .primary-color-color2 a.background-primary, .primary-color-color2 a.background-primary:visited, .primary-color-color2 a.background-primary:link, .primary-color-color2 .background-primary a, .primary-color-color2 .background-primary a:link, .primary-color-color2 .background-primary a:visited, .primary-color-color2 .background-primary a:hover, .primary-color-color2 .background-primary a:active,
+.background-color4, .background-color4 p, a.background-color4, a.background-color4:visited, a.background-color4:link, .background-color4 a, .background-color4 a:link, .background-color4 a:visited, .background-color4 a:hover, .background-color4 a:active, 
+.primary-color-color4 .background-primary, .primary-color-color4 .background-primary p, .primary-color-color4 a.background-primary, .primary-color-color4 a.background-primary:visited, .primary-color-color4 a.background-primary:link, .primary-color-color4 .background-primary a, .primary-color-color4 .background-primary a:link, .primary-color-color4 .background-primary a:visited, .primary-color-color4 .background-primary a:hover, .primary-color-color4 .background-primary a:active {
   color: rgba(255,255,255, 0.75);
 }
-.background-dark h1, .background-dark h2, .background-dark h3, .background-dark h4, .background-dark h5, .background-dark h6,
-.background-dark .h1, .background-dark .h2, .background-dark .h3, .background-dark .h4, .background-dark .h5, .background-dark .h6, 
-.primary-color-dark .background-primary h1, .primary-color-dark .background-primary h2, .primary-color-dark .background-primary h3, .primary-color-dark .background-primary h4, .primary-color-dark .background-primary h5, .primary-color-dark .background-primary h6,
-.primary-color-dark .background-primary .h1, .primary-color-dark .background-primary .h2, .primary-color-dark .background-primary .h3, .primary-color-dark .background-primary .h4, .primary-color-dark .background-primary .h5, .primary-color-dark .background-primary .h6, 
-.background-orange h1, .background-orange h2, .background-orange h3, .background-orange h4, .background-orange h5, .background-orange h6,
-.background-orange .h1, .background-orange .h2, .background-orange .h3, .background-orange .h4, .background-orange .h5, .background-orange .h6,
-.primary-color-orange .background-primary h1, .primary-color-orange .background-primary h2, .primary-color-orange .background-primary h3, .primary-color-orange .background-primary h4, .primary-color-orange .background-primary h5, .primary-color-orange .background-primary h6,
-.primary-color-orange .background-primary .h1, .primary-color-orange .background-primary .h2, .primary-color-orange .background-primary .h3, .primary-color-orange .background-primary .h4, .primary-color-orange .background-primary .h5, .primary-color-orange .background-primary .h6, 
-.background-red h1, .background-red h2, .background-red h3, .background-red h4, .background-red h5, .background-red h6,
-.background-red .h1, .background-red .h2, .background-red .h3, .background-red .h4, .background-red .h5, .background-red .h6,
-.primary-color-red .background-primary h1, .primary-color-red .background-primary h2, .primary-color-red .background-primary h3, .primary-color-red .background-primary h4, .primary-color-red .background-primary h5, .primary-color-red .background-primary h6,
-.primary-color-red .background-primary .h1, .primary-color-red .background-primary .h2, .primary-color-red .background-primary .h3, .primary-color-red .background-primary .h4, .primary-color-red .background-primary .h5, .primary-color-red .background-primary .h6, 
-.background-blue h1, .background-blue h2, .background-blue h3, .background-blue h4, .background-blue h5, .background-blue h6,
-.background-blue .h1, .background-blue .h2, .background-blue .h3, .background-blue .h4, .background-blue .h5, .background-blue .h6,
-.primary-color-blue .background-primary h1, .primary-color-blue .background-primary h2, .primary-color-blue .background-primary h3, .primary-color-blue .background-primary h4, .primary-color-blue .background-primary h5, .primary-color-blue .background-primary h6,
-.primary-color-blue .background-primary .h1, .primary-color-blue .background-primary .h2, .primary-color-blue .background-primary .h3, .primary-color-blue .background-primary .h4, .primary-color-blue .background-primary .h5, .primary-color-blue .background-primary .h6, 
-.background-aqua h1, .background-aqua h2, .background-aqua h3, .background-aqua h4, .background-aqua h5, .background-aqua h6,
-.background-aqua .h1, .background-aqua .h2, .background-aqua .h3, .background-aqua .h4, .background-aqua .h5, .background-aqua .h6,
-.primary-color-aqua .background-primary h1, .primary-color-aqua .background-primary h2, .primary-color-aqua .background-primary h3, .primary-color-aqua .background-primary h4, .primary-color-aqua .background-primary h5, .primary-color-aqua .background-primary h6,
-.primary-color-aqua .background-primary .h1, .primary-color-aqua .background-primary .h2, .primary-color-aqua .background-primary .h3, .primary-color-aqua .background-primary .h4, .primary-color-aqua .background-primary .h5, .primary-color-aqua .background-primary .h6 {
+.background-color5 h1, .background-color5 h2, .background-color5 h3, .background-color5 h4, .background-color5 h5, .background-color5 h6,
+.background-color5 .h1, .background-color5 .h2, .background-color5 .h3, .background-color5 .h4, .background-color5 .h5, .background-color5 .h6, 
+.primary-color-color5 .background-primary h1, .primary-color-color5 .background-primary h2, .primary-color-color5 .background-primary h3, .primary-color-color5 .background-primary h4, .primary-color-color5 .background-primary h5, .primary-color-color5 .background-primary h6,
+.primary-color-color5 .background-primary .h1, .primary-color-color5 .background-primary .h2, .primary-color-color5 .background-primary .h3, .primary-color-color5 .background-primary .h4, .primary-color-color5 .background-primary .h5, .primary-color-color5 .background-primary .h6, 
+.background-color3 h1, .background-color3 h2, .background-color3 h3, .background-color3 h4, .background-color3 h5, .background-color3 h6,
+.background-color3 .h1, .background-color3 .h2, .background-color3 .h3, .background-color3 .h4, .background-color3 .h5, .background-color3 .h6,
+.primary-color-color3 .background-primary h1, .primary-color-color3 .background-primary h2, .primary-color-color3 .background-primary h3, .primary-color-color3 .background-primary h4, .primary-color-color3 .background-primary h5, .primary-color-color3 .background-primary h6,
+.primary-color-color3 .background-primary .h1, .primary-color-color3 .background-primary .h2, .primary-color-color3 .background-primary .h3, .primary-color-color3 .background-primary .h4, .primary-color-color3 .background-primary .h5, .primary-color-color3 .background-primary .h6, 
+.background-color1 h1, .background-color1 h2, .background-color1 h3, .background-color1 h4, .background-color1 h5, .background-color1 h6,
+.background-color1 .h1, .background-color1 .h2, .background-color1 .h3, .background-color1 .h4, .background-color1 .h5, .background-color1 .h6,
+.primary-color-color1 .background-primary h1, .primary-color-color1 .background-primary h2, .primary-color-color1 .background-primary h3, .primary-color-color1 .background-primary h4, .primary-color-color1 .background-primary h5, .primary-color-color1 .background-primary h6,
+.primary-color-color1 .background-primary .h1, .primary-color-color1 .background-primary .h2, .primary-color-color1 .background-primary .h3, .primary-color-color1 .background-primary .h4, .primary-color-color1 .background-primary .h5, .primary-color-color1 .background-primary .h6, 
+.background-color2 h1, .background-color2 h2, .background-color2 h3, .background-color2 h4, .background-color2 h5, .background-color2 h6,
+.background-color2 .h1, .background-color2 .h2, .background-color2 .h3, .background-color2 .h4, .background-color2 .h5, .background-color2 .h6,
+.primary-color-color2 .background-primary h1, .primary-color-color2 .background-primary h2, .primary-color-color2 .background-primary h3, .primary-color-color2 .background-primary h4, .primary-color-color2 .background-primary h5, .primary-color-color2 .background-primary h6,
+.primary-color-color2 .background-primary .h1, .primary-color-color2 .background-primary .h2, .primary-color-color2 .background-primary .h3, .primary-color-color2 .background-primary .h4, .primary-color-color2 .background-primary .h5, .primary-color-color2 .background-primary .h6, 
+.background-color4 h1, .background-color4 h2, .background-color4 h3, .background-color4 h4, .background-color4 h5, .background-color4 h6,
+.background-color4 .h1, .background-color4 .h2, .background-color4 .h3, .background-color4 .h4, .background-color4 .h5, .background-color4 .h6,
+.primary-color-color4 .background-primary h1, .primary-color-color4 .background-primary h2, .primary-color-color4 .background-primary h3, .primary-color-color4 .background-primary h4, .primary-color-color4 .background-primary h5, .primary-color-color4 .background-primary h6,
+.primary-color-color4 .background-primary .h1, .primary-color-color4 .background-primary .h2, .primary-color-color4 .background-primary .h3, .primary-color-color4 .background-primary .h4, .primary-color-color4 .background-primary .h5, .primary-color-color4 .background-primary .h6 {
   color: #fff;
 }
 .text-white, .text-white *, .primary-color-white .text-primary, .primary-color-white .text-primary * {
   color: #fff !important;
 }
-.text-orange, .text-orange *, .primary-color-orange .text-primary, .primary-color-orange .text-primary * {
-  color: #E4A600 !important;
+.text-color3, .text-color3 *, .primary-color-color3 .text-primary, .primary-color-color3 .text-primary * {
+  color: #97a57f !important;
 }
-.text-red, .text-red *, .primary-color-red .text-primary, .primary-color-red .text-primary * {
-  color: #C81010 !important;
+.text-color1, .text-color1 *, .primary-color-color1 .text-primary, .primary-color-color1 .text-primary * {
+  color: #B3A75E !important;
 }
-.text-blue, .text-blue *, .primary-color-blue .text-primary, .primary-color-blue .text-primary * {
-  color: #005881 !important;
+.text-color2, .text-color2 *, .primary-color-color2 .text-primary, .primary-color-color2 .text-primary * {
+  color: #425c37 !important;
 }
-.text-aqua, .text-aqua *, .primary-color-aqua .text-primary, .primary-color-aqua .text-primary * {
-  color: #00B5A6 !important;
+.text-color4, .text-color4 *, .primary-color-color4 .text-primary, .primary-color-color4 .text-primary * {
+  color: #4f6540 !important;
 }
-.text-dark, .text-dark *, .primary-color-dark .text-primary, .primary-color-dark .text-primary * {
-  color: #002633 !important;
+.text-color5, .text-color5 *, .primary-color-color5 .text-primary, .primary-color-color5 .text-primary * {
+  color: #213716 !important;
 } 
-.text-primary-hover, .text-white-hover, .text-yellow-hover, .text-orange-hover, .text-red-hover, .text-pink-hover, .text-purple, .text-blue-hover, .text-light-blue, .text-aqua-hover, .text-green-hover, .text-dark-hover {
+.text-primary-hover, .text-white-hover, .text-yellow-hover, .text-color3-hover, .text-color1-hover, .text-pink-hover, .text-purple, .text-color2-hover, .text-light-color2, .text-color4-hover, .text-green-hover, .text-color5-hover {
   transition: color 0.20s linear 0s;
   -o-transition: color 0.20s linear 0s;
   -ms-transition: color 0.20s linear 0s;
@@ -323,37 +323,37 @@ ul.chevron .submenu > a::after, ul.chevron .sub-submenu > a::after, ul.chevron .
 .text-yellow-hover:hover, .primary-color-yellow .text-primary-hover:hover {
   color: #F1D529 !important;
 }
-.text-red-hover:hover, .primary-color-red .text-primary-hover:hover {
-  color: #C81010 !important;
+.text-color1-hover:hover, .primary-color-color1 .text-primary-hover:hover {
+  color: #B3A75E !important;
 }
-.text-blue-hover:hover, .primary-color-blue .text-primary-hover:hover {
-  color: #005881 !important;
+.text-color2-hover:hover, .primary-color-color2 .text-primary-hover:hover {
+  color: #425c37 !important;
 }
-.text-aqua-hover:hover, .primary-color-aqua .text-primary-hover:hover {
-  color: #00B5A6 !important;
+.text-color4-hover:hover, .primary-color-color4 .text-primary-hover:hover {
+  color: #4f6540 !important;
 }
-.text-dark-hover:hover, .primary-color-dark .text-primary-hover:hover {
-  color: #002633 !important;
+.text-color5-hover:hover, .primary-color-color5 .text-primary-hover:hover {
+  color: #213716 !important;
 } 
 
 /* Background Colors */
 .background-white, .primary-color-white .background-primary {
   background-color: #fff !important;
 }
-.background-orange, .primary-color-orange .background-primary {
-  background-color: #E4A600 !important;
+.background-color3, .primary-color-color3 .background-primary {
+  background-color: #97a57f !important;
 }
-.background-red, .primary-color-red .background-primary {
-  background-color: #C81010 !important;
+.background-color1, .primary-color-color1 .background-primary {
+  background-color: #B3A75E !important;
 }
-.background-blue, .primary-color-blue .background-primary {
-  background-color: #005881 !important;
+.background-color2, .primary-color-color2 .background-primary {
+  background-color: #425c37 !important;
 }
-.background-aqua, .primary-color-aqua .background-primary {
-  background-color: #00B5A6 !important;
+.background-color4, .primary-color-color4 .background-primary {
+  background-color: #4f6540 !important;
 }
-.background-dark, .primary-color-dark .background-primary {
-  background-color: #002633 !important; 
+.background-color5, .primary-color-color5 .background-primary {
+  background-color: #213716 !important; 
 }
 .background-grey {
   background-color: #f5f5f5 !important;
@@ -945,7 +945,7 @@ form.customform input:hover, form.customform textarea:hover, form.customform sel
     }
     
     .top-nav li a, .background-white .top-nav li a {
-      background: #002633 none repeat scroll 0 0;
+      background: #213716 none repeat scroll 0 0;
       color: #fff;
       font-size: 1.1em;
       padding: 1em;
@@ -1386,7 +1386,7 @@ section, header {
   filter: Alpha(Opacity=30);
   opacity: 0.3;  
 }
-.background-dark .owl-carousel .owl-dot span {
+.background-color5 .owl-carousel .owl-dot span {
   background: #fff;
 }
 .owl-carousel.text-left .owl-dots {
@@ -1442,20 +1442,20 @@ section, header {
   margin-top: 20px;
 }
 /* Background Colors */
-.background-orange .background-white.button-more, .primary-color-orange .background-primary .background-white.button-more {
+.background-color3 .background-white.button-more, .primary-color-color3 .background-primary .background-white.button-more {
   color: #DAA248 !important;
 }
-.background-red .background-white.button-more, .primary-color-red .background-primary .background-white.button-more {
+.background-color1 .background-white.button-more, .primary-color-color1 .background-primary .background-white.button-more {
   color: #EB4646 !important;
 }
-.background-blue .background-white.button-more, .primary-color-blue .background-primary .background-white.button-more {
+.background-color2 .background-white.button-more, .primary-color-color2 .background-primary .background-white.button-more {
   color: #08587d !important;
 }
-.background-aqua .background-white.button-more, .primary-color-aqua .background-primary .background-white.button-more {
+.background-color4 .background-white.button-more, .primary-color-color4 .background-primary .background-white.button-more {
   color: #5EB6AF !important;
 }
-.background-dark .background-white.button-more, .primary-color-dark .background-primary .background-white.button-more {
-  color: #002633 !important; 
+.background-color5 .background-white.button-more, .primary-color-color5 .background-primary .background-white.button-more {
+  color: #213716 !important; 
 }
 
 @media screen and (max-width:768px) {
@@ -1476,7 +1476,7 @@ section, header {
   .logo img.logo-white {
     display:none;
   }
-  .logo img.logo-dark {
+  .logo img.logo-color5 {
     display:block;
   }
   .nav-text::after {
