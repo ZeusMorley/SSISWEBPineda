@@ -197,6 +197,7 @@ td {border-right:1px solid #fff;}
   background: #213716 none repeat scroll 0 0;
   color: #fff;
 }
+
 .background-none {
   background: rgba(0, 0, 0, 0) none repeat scroll 0 0!important;
   border: 0;
@@ -354,6 +355,15 @@ ul.chevron .submenu > a::after, ul.chevron .sub-submenu > a::after, ul.chevron .
 }
 .background-color5, .primary-color-color5 .background-primary {
   background-color: #213716 !important; 
+}
+.background-color6, .primary-color-color6 .background-primary {
+  background-color: #03AC13 !important; 
+}
+.background-color7, .primary-color-color7 .background-primary {
+  background-color: #E3242B !important; 
+}
+.background-color8, .primary-color-color8 .background-primary {
+  background-color: #F9E076 !important; 
 }
 .background-grey {
   background-color: #f5f5f5 !important;
