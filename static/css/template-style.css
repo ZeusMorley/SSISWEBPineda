@@ -107,7 +107,7 @@ a.text-tag:link:hover {
   -webkit-transition: all 0.20s linear 0s;
 }
 ul.text-list, ol.text-list {
-  font-size: 0.85rem;
+  font-size: 2rem;
   line-height: 1.8rem;
   padding: 0 16px;
 }
@@ -1358,6 +1358,13 @@ nav {
 .top-nav li ul li a, .background-white .top-nav li ul li a, .top-nav .active-item li a {
   background: #fff none repeat scroll 0 0;
   color: rgba(0,0,0, 0.75);
+}
+
+textarea {
+width: 240px;
+height: 24px;
+resize: none;
+text-align: center;
 }
 
 /* Custom form */
