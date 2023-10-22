@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en-US">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Edit College</title>
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/components.css') }}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/icons.css') }}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/responsee.css') }}">     
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/template-style.css') }}">
+
+      <script>
+      function home() {
+      window.open('http://127.0.0.1:5000/', '_self')
+      }
+
+      function collegetab_open() {
+      window.open('http://127.0.0.1:5000/collegetab', '_self')
+      }
+
+      </script>
+   </head>
+
+   <body class="size-1520 primary-color-color1 background-color5">
+
+      <header>
+        <a onclick="home()">
+        <img src="static/img/logo.png" style="width:700px;" class="left">
+        </a>
+      </header>
+      
+      <main>
+        <section class="grid margin text-center">
+          <form action="/collegesubmitedit" method="POST">
+          <a class="s-12 m-6 l-3 padding-2x vertical-center margin-bottom background-color3" onclick="collegetab_open()">
+            <img src="static/img/collegeicon.png" style="width:100px;height:100px;" class="center">
+            <h3 class="text-strong text-size-20 text-line-height-1 margin-bottom-30 text-uppercase">College</h3>
+          </a>
+
+          <a class="s-12 m-6 l-3 padding-2x vertical-center margin-bottom background-color3"> 
+          <h3 class="text-strong text-size-20 text-line-height-1 margin-bottom-30 text-uppercase">College Code</h3>
+          <input type="text" name="collegecode">
+
+          </a>
+
+          <a class="s-12 m-6 l-3 padding-2x vertical-center margin-bottom background-color3">
+          <h3 class="text-strong text-size-20 text-line-height-1 margin-bottom-30 text-uppercase">New College Name</h3>
+          <input type="text" name="collegename">
+          </a>
+
+          <a class="s-12 m-6 l-3 padding-2x vertical-center margin-bottom background-color8">
+          <img src="static/img/editicon.png" style="width:100px;height:100px;" class="center">
+          <h3 class="text-strong text-size-20 text-line-height-1 margin-bottom-30 text-uppercase">Confirm Edit</h3>
+          <input type="submit" value="Submit">
+          </a>
+        </form>
+        </section>
+                
+      </main>
+   </body>
+</html>

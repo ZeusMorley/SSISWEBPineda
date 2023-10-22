@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Search Results</title>
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/components.css') }}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/icons.css') }}"> 
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/template-style.css') }}">
+
+   <style>
+      li {
+         font-size: 16px;
+         color: #B3A75E;
+      }
+   </style>
+   </head>
+   <body class="size-1520 primary-color-color1 background-color5">
+      <header></header>
+      <main>
+      <h2>Search Results</h2>
+       
+         {% if not results %}
+         <p>No matches found.</p>
+         {% else %}
+         <h3>Matches in College:</h3>
+         <ul>
+            {% for result in results.college %}
+               <li>{{ result[0] }} - {{ result[1] }}</li>
+            {% endfor %}
+         </ul>
+           
+         <h3>Matches in Course:</h3>
+         <ul>
+            {% for result in results.course %}
+               <li>{{ result[0] }} - {{ result[1] }}</li>
+            {% endfor %}
+         </ul>
+           
+         <h3>Matches in Student:</h3>
+         <ul>
+            {% for result in results.student %}
+               <li>{{ result[0] }} - {{ result[1] }} {{ result[2] }} - {{ result[4] }} - {{ result[5] }}</li>
+            {% endfor %}
+         </ul>
+         {% endif %}
+      </main>
+   </body>
+</html>
+

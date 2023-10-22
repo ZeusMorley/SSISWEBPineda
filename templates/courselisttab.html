@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Course List</title>
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/components.css') }}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/icons.css') }}"> 
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/template-style.css') }}">
+
+   </head>
+   <body class="size-1520 primary-color-color1 background-color5">
+      <header></header>
+      
+      <main>
+      <a class="s-12 m-6 l-3 padding-2x vertical-center margin-bottom">
+      <h3 class="text-strong text-size-18 text-line-height-1 margin-bottom-30 text-uppercase">Course code - Course name (College)</h3>
+
+        <ul style="font-size: 18px; color: #B3A75E;">
+        {% for course in courses %}
+          {{ course[0] }} - {{ course[1] }} ( {{course[2]}} )<br>
+        {% endfor %}
+        </ul>
+      </a>
+      
+      </main>
+   </body>
+</html>

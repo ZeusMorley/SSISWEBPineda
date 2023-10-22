@@ -6,48 +6,60 @@
       <title>SSIS Pineda</title>
       <link rel="stylesheet" href="{{ url_for('static', filename='css/components.css') }}">
       <link rel="stylesheet" href="{{ url_for('static', filename='css/icons.css') }}">
-      <link rel="stylesheet" href="{{ url_for('static', filename='css/responsee.css') }}">
-      <link rel="stylesheet" href="{{ url_for('static', filename='owl-carousel/owl.carousel.css') }}">
-      <link rel="stylesheet" href="{{ url_for('static', filename='owl-carousel/owl.theme.css') }}">
-      <!-- CUSTOM STYLE -->      
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/responsee.css') }}">     
       <link rel="stylesheet" href="{{ url_for('static', filename='css/template-style.css') }}">
-      <link href="https://fonts.googleapis.com/css?family=Barlow:100,300,400,700,800&amp;subset=latin-ext" rel="stylesheet">  
-      <script type="text/javascript" src="static/js/jquery-1.8.3.min.js"></script>
-      <script type="text/javascript" src="static/js/jquery-ui.min.js"></script>
 
       <script>
       function home() {
-      window.open('http://127.0.0.1:5000/', '_self')
+      window.open('http://127.0.0.1:5000/', '_self');
       }
 
       function studenttab_open() {
-      window.open('http://127.0.0.1:5000/studenttab', '_self')
+      window.open('http://127.0.0.1:5000/studenttab', '_self');
       }
 
       function coursetab_open() {
-      window.open('http://127.0.0.1:5000/coursetab', '_self')
+      window.open('http://127.0.0.1:5000/coursetab', '_self');
       }
 
       function collegetab_open() {
-      window.open('http://127.0.0.1:5000/collegetab', '_self')
+      window.open('http://127.0.0.1:5000/collegetab', '_self');
       }
 
       function searchtab_open() {
-      window.open('http://127.0.0.1:5000/searchtab', '_self')
+      window.open('http://127.0.0.1:5000/searchtab', '_self');
+      }
+
+      function courseaddtab_open() {
+      window.open('http://127.0.0.1:5000/collegelisttab', '_blank', 'width=400, height=600, scrollbars=yes');
+      window.location.replace('http://127.0.0.1:5000/courseaddtab');
+      }
+
+      function coursedeletetab_open() {
+      window.open('http://127.0.0.1:5000/courselisttab', '_blank', 'width=400, height=600, scrollbars=yes');
+      window.open('http://127.0.0.1:5000/coursedeletetab', '_self');
+      }
+
+      function courseedittab_open() {
+      window.open('http://127.0.0.1:5000/courselisttab', '_blank', 'width=400, height=600, scrollbars=yes');
+      window.open('http://127.0.0.1:5000/courseedittab', '_self');
+      }
+
+      function courselisttab_open() {
+      window.open('http://127.0.0.1:5000/courselisttab', '', 'width=600, height=600, scrollbars=yes');
       }
       </script>
    </head>
 
    <body class="size-1520 primary-color-color1 background-color5">
-      <!-- HEADER -->
-      <header>
-        <a onclick="home()">
-        <img src="static/img/logo.png" style="width:700px;" class="left">
-        </a>
-      </header>
+
+    <header>
+      <a onclick="home()">
+      <img src="static/img/logo.png" style="width:700px;" class="left">
+      </a>
+    </header>
       
-      <!-- MAIN -->
-      <main role="main">
+      <main>
         <section class="grid margin text-center">
           <a class="s-12 m-6 l-3 padding-2x vertical-center margin-bottom background-color1" onclick="studenttab_open()">
             <img src="static/img/studenticon.png" style="width:100px;height:100px;" class="center">
@@ -59,13 +71,13 @@
             <h3 class="text-strong text-size-20 text-line-height-1 margin-bottom-30 text-uppercase">Course</h3>
           </a>
 
-          <a class="s-12 m-6 l-3 padding-2x vertical-center margin-bottom background-color2">
-            <img src="static/img/courseicon.png" style="width:100px;height:100px;" class="center">
+          <a class="s-12 m-6 l-3 padding-2x vertical-center margin-bottom background-color2" onclick="courseaddtab_open()">
+            <img src="static/img/addicon.png" style="width:100px;height:100px;" class="center">
             <h3 class="text-strong text-size-20 text-line-height-1 margin-bottom-30 text-uppercase">Add Course</h3>
           </a>
 
-          <a class="s-12 m-6 l-3 padding-2x vertical-center margin-bottom background-color2">
-            <img src="static/img/courseicon.png" style="width:100px;height:100px;" class="center">
+          <a class="s-12 m-6 l-3 padding-2x vertical-center margin-bottom background-color2" onclick="coursedeletetab_open()">
+            <img src="static/img/deleteicon.png" style="width:100px;height:100px;" class="center">
             <h3 class="text-strong text-size-20 text-line-height-1 margin-bottom-30 text-uppercase">Delete Course</h3>
           </a>
           
@@ -79,23 +91,18 @@
             <h3 class="text-strong text-size-20 text-line-height-1 margin-bottom-30 text-uppercase">Search</h3>
           </a>
 
-          <a class="s-12 m-6 l-3 padding-2x vertical-center margin-bottom background-color2">
-            <img src="static/img/courseicon.png" style="width:100px;height:100px;" class="center">
+          <a class="s-12 m-6 l-3 padding-2x vertical-center margin-bottom background-color2" onclick="courseedittab_open()">
+            <img src="static/img/editicon.png" style="width:100px;height:100px;" class="center">
             <h3 class="text-strong text-size-20 text-line-height-1 margin-bottom-30 text-uppercase">Edit Course</h3>
           </a>
 
-          <a class="s-12 m-6 l-3 padding-2x vertical-center margin-bottom background-color2">
-            <img src="static/img/courseicon.png" style="width:100px;height:100px;" class="center">
+          <a class="s-12 m-6 l-3 padding-2x vertical-center margin-bottom background-color2" onclick="courselisttab_open()">
+            <img src="static/img/listicon.png" style="width:100px;height:100px;" class="center">
             <h3 class="text-strong text-size-20 text-line-height-1 margin-bottom-30 text-uppercase">List Course</h3>
           </a>
 
         </section>
                 
       </main>
-                                                                
-      <script type="text/javascript" src="static/js/responsee.js"></script>
-      <script type="text/javascript" src="static/owl-carousel/owl.carousel.js"></script>
-      <script type="text/javascript" src="static/js/template-scripts.js"></script>
-
    </body>
 </html>
