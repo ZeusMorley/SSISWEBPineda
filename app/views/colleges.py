@@ -1,20 +1,20 @@
 from flask import Blueprint, render_template, request
 
-colleges_bp = Blueprint('colleges', __name__)
+colleges_bp = Blueprint('colleges', __name__, template_folder='templates')
 
 @colleges_bp.route("/collegetab")
 def collegetab_open():
-    return render_template('collegetab.html')
+    return render_template('college/collegetab.html')
 
 
-@app.route("/collegeaddtab", methods=['GET', 'POST'])
+@colleges_bp.route("/collegeaddtab", methods=['GET', 'POST'])
 def collegeaddtab_open():
-    return render_template('collegeaddtab.html')
+    return render_template('college/collegeaddtab.html')
 
 
-@app.route('/collegesubmitadd', methods=['POST'])
+@colleges_bp.route('/collegesubmitadd', methods=['POST'])
 def addcollege():
-    if request.method == 'POST':
+    if request.college/ethod == 'POST':
         cur = mysql.cursor()
         college_code = request.form['collegecode']
         college_name = request.form['collegename']
@@ -41,10 +41,12 @@ def addcollege():
         return "College added successfully"
 
 
-@app.route("/collegedeletetab")
+@colleges_bp.route("/collegedeletetab")
 def collegedeletetab_open():
-    return render_template('collegedeletetab.html')
-@app.route('/collegesubmitdelete', methods=['POST'])
+    return render_template('college/collegedeletetab.html')
+
+
+@colleges_bp.route('/collegesubmitdelete', methods=['POST'])
 def delete_college():
     if request.method == 'POST':
         cur = mysql.cursor()
@@ -70,10 +72,12 @@ def delete_college():
         return "College deleted successfully"
 
 
-@app.route("/collegeedittab")
+@colleges_bp.route("/collegeedittab")
 def collegeedittab_open():
-    return render_template('collegeedittab.html')
-@app.route('/collegesubmitedit', methods=['POST'])
+    return render_template('college/collegeedittab.html')
+
+
+@colleges_bp.route('/collegesubmitedit', methods=['POST'])
 def edit_college():
     if request.method == 'POST':
         cur = mysql.cursor()
@@ -103,10 +107,14 @@ def edit_college():
         return "College name updated successfully"
 
 
-@app.route("/collegelisttab")
+@colleges_bp.route("/collegelisttab")
 def collegelisttab_open():
     cur = mysql.cursor()
     cur.execute("SELECT * FROM college")
     colleges = cur.fetchall()
     cur.close()
-    return render_template('collegelisttab.html', colleges=colleges)
+    return render_template('college/collegelisttab.html', colleges=colleges)
+
+
+from colleges import colleges_bp
+app.register_blueprint(colleges_bp)

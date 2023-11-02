@@ -1,15 +1,18 @@
 from flask import Blueprint, render_template, request
 
-students_bp = Blueprint('students', __name__)
+students_bp = Blueprint('students', __name__, template_folder='templates')
 
 @students_bp.route("/studenttab")
 def studenttab_open():
-    return render_template('studenttab.html')
+    return render_template('student/studenttab.html')
 
-@app.route("/studentaddtab")
+
+@students_bp.route("/studentaddtab")
 def studentaddtab_open():
-    return render_template('studentaddtab.html')
-@app.route('/studentsubmitadd', methods=['POST'])
+    return render_template('student/studentaddtab.html')
+
+
+@students_bp.route('/studentsubmitadd', methods=['POST'])
 def addstudent():
     if request.method == 'POST':
         cur = mysql.cursor()
@@ -55,10 +58,13 @@ def addstudent():
 
         return "Student successfully added"
 
-@app.route("/studentdeletetab")
+
+@students_bp.route("/studentdeletetab")
 def studentdeletetab_open():
-    return render_template('studentdeletetab.html')
-@app.route('/studentsubmitdelete', methods=['POST'])
+    return render_template('student/studentdeletetab.html')
+
+
+@students_bp.route('/studentsubmitdelete', methods=['POST'])
 def delete_student():
     if request.method == 'POST':
         cur = mysql.cursor()
@@ -78,10 +84,13 @@ def delete_student():
         cur.close()
         return "Student deleted successfully"
 
-@app.route("/studentedittab")
+
+@students_bp.route("/studentedittab")
 def studentedittab_open():
-    return render_template('studentedittab.html')
-@app.route('/studentsubmitedit', methods=['POST'])
+    return render_template('student/studentedittab.html')
+
+
+@students_bp.route('/studentsubmitedit', methods=['POST'])
 def edit_student():
     if request.method == 'POST':
         cur = mysql.cursor()
@@ -128,10 +137,14 @@ def edit_student():
 
         return "Student details updated successfully"
 
-@app.route("/studentlisttab")
+@students_bp.route("/studentlisttab")
 def studentlisttab_open():
     cur = mysql.cursor()
     cur.execute("SELECT * FROM student")
     students = cur.fetchall()
     cur.close()
-    return render_template('studentlisttab.html', students=students)
+    return render_template('student/studentlisttab.html', students=students)
+
+
+from students import students_bp
+app.register_blueprint(students_bp)

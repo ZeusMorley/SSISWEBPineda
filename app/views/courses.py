@@ -1,18 +1,18 @@
 from flask import Blueprint, render_template, request
 
-courses_bp = Blueprint('courses', __name__)
+courses_bp = Blueprint('courses', __name__, template_folder='templates')
 
 @courses_bp.route("/coursetab")
 def coursetab_open():
-    return render_template('coursetab.html')
-    
+    return render_template('course/coursetab.html')
 
-@app.route("/courseaddtab", methods=['GET', 'POST'])
+
+@courses_bp.route("/courseaddtab", methods=['GET', 'POST'])
 def courseaddtab_open():
-    return render_template('courseaddtab.html')
+    return render_template('course/courseaddtab.html')
 
 
-@app.route('/coursesubmitadd', methods=['POST'])
+@courses_bp.route('/coursesubmitadd', methods=['POST'])
 def addcourse():
     if request.method == 'POST':
         cur = mysql.cursor()
@@ -49,12 +49,12 @@ def addcourse():
         return "Course added successfully"
 
 
-@app.route("/coursedeletetab")
+@courses_bp.route("/coursedeletetab")
 def coursedeletetab_open():
-    return render_template('coursedeletetab.html')
+    return render_template('course/coursedeletetab.html')
 
 
-@app.route('/coursesubmitdelete', methods=['POST'])
+@courses_bp.route('/coursesubmitdelete', methods=['POST'])
 def delete_course():
     if request.method == 'POST':
         cur = mysql.cursor()
@@ -80,12 +80,12 @@ def delete_course():
         return "Course deleted successfully"
 
 
-@app.route("/courseedittab")
+@courses_bp.route("/courseedittab")
 def courseedittab_open():
-    return render_template('courseedittab.html')
+    return render_template('course/courseedittab.html')
 
 
-@app.route('/coursesubmitedit', methods=['POST'])
+@courses_bp.route('/coursesubmitedit', methods=['POST'])
 def edit_course():
     if request.method == 'POST':
         cur = mysql.cursor()
@@ -124,10 +124,14 @@ def edit_course():
         return "Course details updated successfully"
 
 
-@app.route("/courselisttab")
+@courses_bp.route("/courselisttab")
 def courselisttab_open():
     cur = mysql.cursor()
     cur.execute("SELECT * FROM course")
     courses = cur.fetchall()
     cur.close()
-    return render_template('courselisttab.html', courses=courses)
+    return render_template('course/courselisttab.html', courses=courses)
+
+
+from courses import courses_bp
+app.register_blueprint(courses_bp)
