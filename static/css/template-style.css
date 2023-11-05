@@ -1,6 +1,35 @@
 /* Default Template Styles */
 
 /* Typography */
+
+#flash-popup {
+    position: fixed;
+    top: 160px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    padding: 4px;
+    border: 1px solid #ccc;
+    background-color: #B3A75E;
+    border-radius: 10px;
+    text-align: center;
+    display: none;
+}
+
+.flash-message {
+    margin-bottom: 5px;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.error {
+    color: yellow;
+}
+
+.success {
+    color: white;
+}
+
 body {
   background: #fff;
 }
