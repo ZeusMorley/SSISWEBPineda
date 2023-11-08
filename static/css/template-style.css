@@ -23,11 +23,11 @@
 }
 
 .error {
-    color: yellow;
+    color: #d10a0a;
 }
 
 .success {
-    color: white;
+    color: #54f71e;
 }
 
 body {
