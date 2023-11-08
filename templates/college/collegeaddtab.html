@@ -108,8 +108,35 @@
         </form>
         </section>
       </main>
+
       <div id="flash-popup" style="display: none;">
           <div id="flash-content"></div>
       </div>
+
+      <div id="collegeListOverlay" class="modal-overlay-side">
+        <div class="modal-content">
+            <h3 class="text-strong text-size-18 text-line-height-1 margin-bottom-30 text-uppercase">College Code - College Name</h3>
+            <div class="scrollable-list">
+                <ul id="collegeListContent" style="color: white;"></ul>
+            </div>
+        </div>
+      </div>
+
+      <script>
+        showCollegeList()
+        function showCollegeList() {
+          fetch('/collegelisttab')
+            .then(response => response.json())
+            .then(data => {
+              const collegeListContent = document.getElementById("collegeListContent");
+              collegeListContent.innerHTML = "";
+              data.colleges.forEach(college => {
+                collegeListContent.innerHTML += `<li>${college[0]} - ${college[1]}</li>`;
+              });
+              document.getElementById("collegeListOverlay").style.display = "block";
+            })
+            .catch(error => console.error('Error:', error));
+        }
+      </script>
    </body>
 </html>

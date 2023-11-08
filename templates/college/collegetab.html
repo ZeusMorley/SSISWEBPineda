@@ -11,43 +11,37 @@
 
       <script>
       function home() {
-      window.open('http://127.0.0.1:5000/', '_self')
+        window.open('http://127.0.0.1:5000/', '_self')
       }
 
       function studenttab_open() {
-      window.open('http://127.0.0.1:5000/studenttab', '_self');
+        window.open('http://127.0.0.1:5000/studenttab', '_self');
       }
 
       function coursetab_open() {
-      window.open('http://127.0.0.1:5000/coursetab', '_self');
+        window.open('http://127.0.0.1:5000/coursetab', '_self');
       }
 
       function collegetab_open() {
-      window.open('http://127.0.0.1:5000/collegetab', '_self');
+        window.open('http://127.0.0.1:5000/collegetab', '_self');
       }
 
       function searchtab_open() {
-      window.open('http://127.0.0.1:5000/searchtab', '_self');
+        window.open('http://127.0.0.1:5000/searchtab', '_self');
       }
 
       function collegeaddtab_open() {
-      window.open('http://127.0.0.1:5000/collegeaddtab', '_self');
+        window.open('http://127.0.0.1:5000/collegeaddtab', '_self');
       }
 
       function collegedeletetab_open() {
-      window.open('http://127.0.0.1:5000/collegelisttab', '_blank', 'width=400, height=600, scrollbars=yes');
-      window.open('http://127.0.0.1:5000/collegedeletetab', '_self');
+        window.open('http://127.0.0.1:5000/collegedeletetab', '_self');
       }
 
       function collegeedittab_open() {
-      window.open('http://127.0.0.1:5000/collegelisttab', '_blank', 'width=400, height=600, scrollbars=yes');
-      window.open('http://127.0.0.1:5000/collegeedittab', '_self');
+        window.open('http://127.0.0.1:5000/collegeedittab', '_self');
       }
 
-      function collegelisttab_open() {
-      window.open('http://127.0.0.1:5000/collegelisttab', '_blank', 'width=400, height=600, scrollbars=yes');
-      window.open('http://127.0.0.1:5000/collegelisttab', '', 'width=400, height=600, scrollbars=yes');
-      }
       </script>
    </head>
 
@@ -96,13 +90,40 @@
             <h3 class="text-strong text-size-20 text-line-height-1 margin-bottom-30 text-uppercase">Edit College</h3>
           </a>
 
-          <a class="s-12 m-6 l-3 padding-2x vertical-center margin-bottom background-color3" onclick="collegelisttab_open()">
+          <a class="s-12 m-6 l-3 padding-2x vertical-center margin-bottom background-color3" onclick="showCollegeList()">
             <img src="static/img/listicon.png" style="width:100px;height:100px;" class="center">
             <h3 class="text-strong text-size-20 text-line-height-1 margin-bottom-30 text-uppercase">List College</h3>
           </a>
-
-        </section>
-                
+        </section>     
       </main>
+    <div id="collegeListOverlay" class="modal-overlay">
+      <div class="modal-content">
+          <span class="close" onclick="closeCollegeListOverlay()">&times;</span>
+          <h3 class="text-strong text-size-18 text-line-height-1 margin-bottom-30 text-uppercase">College Code - College Name</h3>
+            <div class="scrollable-list">
+                <ul id="collegeListContent" style="color: white;"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+      function showCollegeList() {
+        fetch('/collegelisttab')
+          .then(response => response.json())
+          .then(data => {
+            const collegeListContent = document.getElementById("collegeListContent");
+            collegeListContent.innerHTML = "";
+            data.colleges.forEach(college => {
+              collegeListContent.innerHTML += `<li>${college[0]} - ${college[1]}</li>`;
+            });
+            document.getElementById("collegeListOverlay").style.display = "block";
+          })
+          .catch(error => console.error('Error:', error));
+      }
+
+      function closeCollegeListOverlay() {
+        document.getElementById("collegeListOverlay").style.display = "none";
+      }
+    </script>
    </body>
 </html>
