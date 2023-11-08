@@ -105,5 +105,36 @@
       <div id="flash-popup" style="display: none;">
           <div id="flash-content"></div>
       </div>
+
+      <div id="courseListOverlay" class="modal-overlay-side">
+        <div class="modal-content">
+          <span class="close" onclick="closeCourseListOverlay()">&times;</span>
+            <h3 class="text-strong text-size-18 text-line-height-1 margin-bottom-30 text-uppercase">Course Code - Course Name (College Code)</h3>
+              <div class="scrollable-list">
+                <ul id="courseListContent" style="color: white;"></ul>
+              </div>
+        </div>
+      </div>
+
+      <script>
+        showCourseList()
+        function showCourseList() {
+          fetch('/courselisttab')
+            .then(response => response.json())
+            .then(data => {
+              const courseListContent = document.getElementById("courseListContent");
+              courseListContent.innerHTML = "";
+              data.courses.forEach(course => {
+                courseListContent.innerHTML += `<li>${course[0]} - ${course[1]} (${course[2]})</li>`;
+              });
+              document.getElementById("courseListOverlay").style.display = "block";
+            })
+            .catch(error => console.error('Error:', error));
+        }
+
+        function closeCourseListOverlay() {
+          document.getElementById("courseListOverlay").style.display = "none";
+        }
+      </script>
    </body>
 </html>
