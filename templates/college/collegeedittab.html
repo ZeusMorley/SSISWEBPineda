@@ -18,11 +18,63 @@
       window.open('http://127.0.0.1:5000/collegetab', '_self')
       }
 
+      document.addEventListener('DOMContentLoaded', function() {
+        document.querySelector('#collegeForm').addEventListener('submit', function(event) {
+          event.preventDefault();
+          const formData = new FormData(this);
+
+          fetch('/collegesubmitadd', {
+            method: 'POST',
+            body: formData,
+          })
+          .then(response => response.json())
+          .then(data => {
+            if (data && data.flashes) {
+              data.flashes.forEach(flashMessage => {
+                alert(flashMessage);
+              });
+            } else {
+              window.location.reload();
+            }
+          })
+          .catch(error => {
+            console.error('Error:', error);
+          });
+        });
+      });
+
+      function displayFlashes(messages) {
+        var popup = document.getElementById("flash-popup");
+        var content = document.getElementById("flash-content");
+
+        var flashHTML = "";
+        messages.forEach(function(message) {
+            flashHTML += `<div class="flash-message ${message[1]}">${message[0]}</div>`;
+        });
+
+        content.innerHTML = flashHTML;
+        popup.style.display = "block";
+
+        setTimeout(function() {
+            popup.style.display = "none";
+            window.location.reload(); // Reload the page
+        }, 3000);
+      }
+
+      function sendData() {
+        var formData = new FormData(document.getElementById('college-form'));
+        fetch('/collegesubmitedit', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => displayFlashes(data.flashes))
+        .catch(error => console.error('Error:', error));
+      }
       </script>
    </head>
 
    <body class="size-1520 primary-color-color1 background-color5">
-      {% include 'flash.html' %}
       <header>
         <a onclick="home()">
         <img src="static/img/logo.png" style="width:700px;" class="left">
@@ -31,7 +83,7 @@
       
       <main>
         <section class="grid margin text-center">
-          <form action="/collegesubmitedit" method="POST">
+          <form action="/collegesubmitedit" method="POST" id="college-form" onsubmit="event.preventDefault(); sendData();">
           <a class="s-12 m-6 l-3 padding-2x vertical-center margin-bottom background-color3" onclick="collegetab_open()">
             <img src="static/img/collegeicon.png" style="width:100px;height:100px;" class="center">
             <h3 class="text-strong text-size-20 text-line-height-1 margin-bottom-30 text-uppercase">College</h3>
@@ -51,11 +103,13 @@
           <a class="s-12 m-6 l-3 padding-2x vertical-center margin-bottom background-color8">
           <img src="static/img/editicon.png" style="width:100px;height:100px;" class="center">
           <h3 class="text-strong text-size-20 text-line-height-1 margin-bottom-30 text-uppercase">Confirm Edit</h3>
-          <input type="submit" value="Submit">
+          <input type="submit" value="Submit" onclick="submitForm(event)">
           </a>
         </form>
-        </section>
-                
+        </section>    
       </main>
+      <div id="flash-popup" style="display: none;">
+          <div id="flash-content"></div>
+      </div>
    </body>
 </html>
