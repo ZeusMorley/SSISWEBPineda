@@ -44,5 +44,5 @@ def index():
     return render_template('index.html')
 
 if __name__ == '__main__':
-    create_table(create_mysql_connection())  # Creating tables at the start
+    create_table(create_mysql_connection())
     app.run(debug=True)
