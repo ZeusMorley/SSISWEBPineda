@@ -1,33 +1,164 @@
-/* Default Template Styles */
+.modal-overlay-student-top{
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 53%;
+  top: 5%;
+  width: 45%;
+  height: 40%;
+  overflow: auto;
+  background-color: rgba(66, 92, 55, 0.98);
+  border: 2px solid #FFFFFF;
+  padding-top: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
 
-/* Typography */
+.modal-overlay-student-side{
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 53%;
+  top: 30%;
+  width: 45%;
+  height: 40%;
+  overflow: auto;
+  background-color: rgba(66, 92, 55, 0.98);
+  border: 2px solid #FFFFFF;
+  padding-top: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.modal-overlay-bottom{
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 60%;
+  top: 55%;
+  width: 38%;
+  height: 40%;
+  overflow: auto;
+  background-color: rgba(66, 92, 55, 0.98);
+  border: 2px solid #FFFFFF;
+  padding-top: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.modal-overlay-top{
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 60%;
+  top: 5%;
+  width: 38%;
+  height: 40%;
+  overflow: auto;
+  background-color: rgba(66, 92, 55, 0.98);
+  border: 2px solid #FFFFFF;
+  padding-top: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.modal-overlay-side{
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 60%;
+  top: 30%;
+  width: 38%;
+  height: 40%;
+  overflow: auto;
+  background-color: rgba(66, 92, 55, 0.98);
+  border: 2px solid #FFFFFF;
+  padding-top: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.modal-overlay-student{
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 25%;
+  top: 30%;
+  width: 50%;
+  height: 40%;
+  overflow: auto;
+  background-color: rgba(66, 92, 55, 0.98);
+  border: 2px solid #FFFFFF;
+  padding-top: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.modal-overlay {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 31%;
+  top: 30%;
+  width: 38%;
+  height: 40%;
+  overflow: auto;
+  background-color: rgba(66, 92, 55, 0.98);
+  border: 2px solid #FFFFFF;
+  padding-top: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.modal-content {
+  max-height: 90%;
+  overflow: auto;
+}
+
+.scrollable-list {
+  max-height: 90%;
+  overflow-y: auto;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
 
 #flash-popup {
-    position: fixed;
-    top: 160px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 300px;
-    padding: 4px;
-    border: 1px solid #ccc;
-    background-color: #B3A75E;
-    border-radius: 10px;
-    text-align: center;
-    display: none;
+  position: fixed;
+  top: 120px;
+  left: 40%;
+  transform: translateX(-50%);
+  width: 300px;
+  padding: 4px;
+  border: 1px solid #ccc;
+  background-color: #B3A75E;
+  border-radius: 10px;
+  text-align: center;
+  display: none;
+  font-size: 20px;
 }
 
 .flash-message {
-    margin-bottom: 5px;
-    padding: 8px;
-    border-radius: 5px;
+  margin-bottom: 5px;
+  padding: 8px;
+  border-radius: 5px;
 }
 
 .error {
-    color: #d10a0a;
+  color: #d10a0a;
 }
 
 .success {
-    color: #54f71e;
+  color: #54f71e;
 }
 
 body {
@@ -392,7 +523,7 @@ ul.chevron .submenu > a::after, ul.chevron .sub-submenu > a::after, ul.chevron .
   background-color: #E3242B !important; 
 }
 .background-color8, .primary-color-color8 .background-primary {
-  background-color: #F9E076 !important; 
+  background-color: #C7B640 !important; 
 }
 .background-grey {
   background-color: #f5f5f5 !important;
@@ -1320,7 +1451,7 @@ form.customform input:hover, form.customform textarea:hover, form.customform sel
 body, p, li, a { 
   font-weight: 400;
   font-family: "Barlow"; 
-  font-size: 0.95rem;  
+  font-size: 1.1rem;  
 } 
 .background-white, .background-white p, a.background-white, .background-white a, .background-white a:link, .background-white a:visited, .background-white a:hover, .background-white a:active {
   color: #999;
