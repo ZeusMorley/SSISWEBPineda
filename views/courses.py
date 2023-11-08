@@ -31,7 +31,7 @@ def addcourse():
         if not course_code:
             flashed_messages.append(("Course code cannot be empty", 'error')) 
         if not college_code:
-            flashed_messages.append(("College code cannot be empty" 'error')) 
+            flashed_messages.append(("College code cannot be empty", 'error')) 
         if not course_name:
             flashed_messages.append(("Course name cannot be empty", 'error')) 
 
@@ -104,6 +104,8 @@ def delete_course():
 @courses_bp.route('/coursesubmitedit', methods=['POST'])
 def edit_course():
     flashed_messages = []
+    existing_course_name = []
+    existing_college_code = []
     mysql = g.get('mysql', None)
     if request.method == 'POST' and mysql:
         cur = mysql.cursor()
@@ -112,41 +114,42 @@ def edit_course():
         new_college_code = request.form['collegecode']
         
         if not course_code:
-            flashed_messages.append(("Course code is required.", 'error')) 
-        if not new_course_name:
-            flashed_messages.append(("Course name is required.", 'error')) 
-        if not new_college_code:
-            flashed_messages.append(("College code is required.", 'error')) 
+            flashed_messages.append(("Course code is required.", 'error'))
+            return jsonify(flashes=flashed_messages)
 
         cur.execute("SELECT * FROM course WHERE coursecode = %s", (course_code,))
         existing_course = cur.fetchone()
         if not existing_course:
-            flashed_messages.append(("Course code does not exist", 'error')) 
+            flashed_messages.append(("Course code does not exist", 'error'))
+            return jsonify(flashes=flashed_messages) 
 
-        cur.execute("SELECT * FROM student WHERE coursecode = %s", (course_code,))
-        has_students = cur.fetchone()
-        if has_students:
-            flashed_messages.append(("Cannot edit this Course because some students belong in it.", 'error')) 
+        existing_course_name = existing_course[1]
 
-        cur.execute("SELECT * FROM college WHERE collegecode = %s", (new_college_code,))
-        existing_college = cur.fetchone()
-        if not existing_college:
-            flashed_messages.append(("College code does not exist", 'error')) 
+        if new_course_name != '' and new_course_name != existing_course_name:
+            sql = "UPDATE course SET coursename = %s WHERE coursecode = %s"
+            cur.execute(sql, (new_course_name, course_code))
+            mysql.commit()
+            flashed_messages.append(("Course name updated successfully", 'success')) 
+        elif new_course_name == '':
+            flashed_messages.append(("No changes in Course name", 'success'))
 
-        if flashed_messages:
-            return jsonify(flashes=flashed_messages)
+        if new_college_code:
+            cur.execute("SELECT * FROM college WHERE collegecode = %s", (new_college_code,))
+            existing_college = cur.fetchone()
+            if existing_college and existing_college[0] != existing_course[2]:
+                existing_college_code = existing_college[0]
+                sql = "UPDATE course SET collegecode = %s WHERE coursecode = %s"
+                cur.execute(sql, (new_college_code, course_code))
+                mysql.commit()
+                flashed_messages.append(("College code updated successfully", 'success')) 
+            elif not existing_college:
+                flashed_messages.append(("College code does not exist", 'error'))
+        else:
+            flashed_messages.append(("No changes in College code", 'success'))
 
-        sql = "UPDATE course SET coursename = %s, collegecode = %s WHERE coursecode = %s"
-        cur.execute(sql, (new_course_name, new_college_code, course_code))
-        mysql.commit()
-        cur.close()
-        flashed_messages.append(("Course details updated successfully", 'success')) 
-
-        if flashed_messages:
-            return jsonify(flashes=flashed_messages)
+        return jsonify(flashes=flashed_messages)
 
     return jsonify(flashes=[])
-    
 
 @courses_bp.route('/courselisttab')
 def courselisttab_open():
@@ -156,5 +159,4 @@ def courselisttab_open():
         cur.execute("SELECT * FROM course")
         courses = cur.fetchall()
         cur.close()
-        return render_template('course/courselisttab.html', courses=courses)
-    flashed_messages.append(("Course list endpoint", 'error')) 
+        return jsonify(courses=courses) 
