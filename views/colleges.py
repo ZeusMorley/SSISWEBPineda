@@ -31,7 +31,7 @@ def addcollege():
         if not college_code:
             flashed_messages.append(("College code cannot be empty", 'error'))
         if not college_name:
-            flashed_messages.append(("College name cannot be empty", 'error') )
+            flashed_messages.append(("College name cannot be empty", 'error'))
 
         cur.execute("SELECT * FROM college WHERE collegecode = %s", (college_code,))
         existing_college = cur.fetchone()
@@ -98,6 +98,7 @@ def delete_college():
 @colleges_bp.route('/collegesubmitedit', methods=['POST'])
 def edit_college():
     flashed_messages = []
+    existing_college_name = []
     mysql = g.get('mysql', None)
     if request.method == 'POST' and mysql:
         cur = mysql.cursor()
@@ -106,33 +107,30 @@ def edit_college():
         
         if not college_code:
             flashed_messages.append(("College code is required.", 'error')) 
-        if not new_college_name:
-            flashed_messages.append(("College name is required.", 'error')) 
 
         cur.execute("SELECT * FROM college WHERE collegecode = %s", (college_code,))
         existing_college = cur.fetchone()
         if not existing_college:
             flashed_messages.append(("College code does not exist", 'error')) 
-
-        cur.execute("SELECT * FROM course WHERE collegecode = %s", (college_code,))
-        has_courses = cur.fetchone()
-        if has_courses:
-            flashed_messages.append(("Cannot edit this College because some courses belong in it.", 'error')) 
+        else:
+            existing_college_name = existing_college[1] 
 
         if flashed_messages:
             return jsonify(flashes=flashed_messages)
 
-        sql = "UPDATE college SET collegename = %s WHERE collegecode = %s"
-        cur.execute(sql, (new_college_name, college_code))
-        mysql.commit()
-        cur.close()
-        flashed_messages.append(("College name updated successfully", 'success')) 
+        if new_college_name != existing_college_name:
+            sql = "UPDATE college SET collegename = %s WHERE collegecode = %s"
+            cur.execute(sql, (new_college_name, college_code))
+            mysql.commit()
+            cur.close()
+            flashed_messages.append(("College name updated successfully", 'success')) 
+        else:
+            flashed_messages.append(("No changes made to the College name", 'success'))
 
         if flashed_messages:
             return jsonify(flashes=flashed_messages)
 
     return jsonify(flashes=[])
-
 
 @colleges_bp.route('/collegelisttab')
 def collegelisttab_open():
@@ -142,4 +140,4 @@ def collegelisttab_open():
         cur.execute("SELECT * FROM college")
         colleges = cur.fetchall()
         cur.close()
-        return render_template('college/collegelisttab.html', colleges=colleges) 
+        return jsonify(colleges=colleges)
