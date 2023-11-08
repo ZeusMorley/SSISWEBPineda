@@ -130,5 +130,55 @@
       <div id="flash-popup" style="display: none;">
           <div id="flash-content"></div>
       </div>
+
+      <div id="studentListOverlay" class="modal-overlay-student-top">
+        <div class="modal-content">
+            <h3 class="text-strong text-size-16 text-line-height-1 margin-bottom-30 text-uppercase">[ID #] First Name Last Name (College Code) - Year lvl - Gender</h3>
+              <div class="scrollable-list">
+                  <ul id="studentListContent" style="color: white;"></ul>
+              </div>
+          </div>
+      </div>
+
+      <div id="courseListOverlay" class="modal-overlay-bottom">
+        <div class="modal-content">
+          <h3 class="text-strong text-size-18 text-line-height-1 margin-bottom-30 text-uppercase">Course Code - Course Name (College Code)</h3>
+            <div class="scrollable-list">
+              <ul id="courseListContent" style="color: white;"></ul>
+            </div>
+        </div>
+      </div>
+
+      <script>
+        showStudentList()
+        function showStudentList() {
+          fetch('/studentlisttab')
+            .then(response => response.json())
+            .then(data => {
+              const studentListContent = document.getElementById("studentListContent");
+              studentListContent.innerHTML = "";
+              data.students.forEach(student => {
+                studentListContent.innerHTML += `<li>[${student[0]}] ${student[1]} ${student[2]} (${student[3]}) - ${student[4]} - ${student[5]}</li>`;
+              });
+              document.getElementById("studentListOverlay").style.display = "block";
+            })
+            .catch(error => console.error('Error:', error));
+        }
+
+        showCourseList()
+        function showCourseList() {
+          fetch('/courselisttab')
+            .then(response => response.json())
+            .then(data => {
+              const courseListContent = document.getElementById("courseListContent");
+              courseListContent.innerHTML = "";
+              data.courses.forEach(course => {
+                courseListContent.innerHTML += `<li>${course[0]} - ${course[1]} (${course[2]})</li>`;
+              });
+              document.getElementById("courseListOverlay").style.display = "block";
+            })
+            .catch(error => console.error('Error:', error));
+        }
+      </script>
    </body>
 </html>

@@ -105,5 +105,31 @@
       <div id="flash-popup" style="display: none;">
           <div id="flash-content"></div>
       </div>
+
+      <div id="studentListOverlay" class="modal-overlay-student-side">
+        <div class="modal-content">
+          <h3 class="text-strong text-size-16 text-line-height-1 margin-bottom-30 text-uppercase">[ID #] First Name Last Name (College Code) - Year lvl - Gender</h3>
+            <div class="scrollable-list">
+                <ul id="studentListContent" style="color: white;"></ul>
+            </div>
+          </div>
+      </div>
+
+      <script>
+        showStudentList()
+        function showStudentList() {
+          fetch('/studentlisttab')
+            .then(response => response.json())
+            .then(data => {
+              const studentListContent = document.getElementById("studentListContent");
+              studentListContent.innerHTML = "";
+              data.students.forEach(student => {
+                studentListContent.innerHTML += `<li>[${student[0]}] ${student[1]} ${student[2]} (${student[3]}) - ${student[4]} - ${student[5]}</li>`;
+              });
+              document.getElementById("studentListOverlay").style.display = "block";
+            })
+            .catch(error => console.error('Error:', error));
+        }
+      </script>
    </body>
 </html>

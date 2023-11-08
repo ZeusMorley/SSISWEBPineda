@@ -11,42 +11,39 @@
 
       <script>
       function home() {
-      window.open('http://127.0.0.1:5000/', '_self')
+        window.open('http://127.0.0.1:5000/', '_self')
       }
 
       function studenttab_open() {
-      window.open('http://127.0.0.1:5000/studenttab', '_self')
+        window.open('http://127.0.0.1:5000/studenttab', '_self')
       }
 
       function coursetab_open() {
-      window.open('http://127.0.0.1:5000/coursetab', '_self')
+        window.open('http://127.0.0.1:5000/coursetab', '_self')
       }
 
       function collegetab_open() {
-      window.open('http://127.0.0.1:5000/collegetab', '_self')
+        window.open('http://127.0.0.1:5000/collegetab', '_self')
       }
 
       function searchtab_open() {
-      window.open('http://127.0.0.1:5000/searchtab', '_self')
+        window.open('http://127.0.0.1:5000/searchtab', '_self')
       }
 
       function studentaddtab_open() {
-      window.open('http://127.0.0.1:5000/studentlisttab', '_blank', 'width=800, height=600, scrollbars=yes');
-      window.open('http://127.0.0.1:5000/studentaddtab', '_self');
+        window.open('http://127.0.0.1:5000/studentaddtab', '_self');
       }
 
       function studentdeletetab_open() {
-      window.open('http://127.0.0.1:5000/studentlisttab', '_blank', 'width=800, height=600, scrollbars=yes');
-      window.open('http://127.0.0.1:5000/studentdeletetab', '_self')
+        window.open('http://127.0.0.1:5000/studentdeletetab', '_self')
       }
 
       function studentedittab_open() {
-      window.open('http://127.0.0.1:5000/studentlisttab', '_blank', 'width=800, height=600, scrollbars=yes');
-      window.open('http://127.0.0.1:5000/studentedittab', '_self')
+        window.open('http://127.0.0.1:5000/studentedittab', '_self')
       }
 
       function studentlisttab_open() {
-      window.open('http://127.0.0.1:5000/studentlisttab', '_self')
+        window.open('http://127.0.0.1:5000/studentlisttab', '_self')
       }
       </script>
    </head>
@@ -95,13 +92,40 @@
             <h3 class="text-strong text-size-20 text-line-height-1 margin-bottom-30 text-uppercase">Edit Student</h3>
           </a>
 
-          <a class="s-12 m-6 l-3 padding-2x vertical-center margin-bottom background-color1" onclick="studentlisttab_open()">
+          <a class="s-12 m-6 l-3 padding-2x vertical-center margin-bottom background-color1" onclick="showStudentList()">
             <img src="static/img/listicon.png" style="width:100px;height:100px;" class="center">
             <h3 class="text-strong text-size-20 text-line-height-1 margin-bottom-30 text-uppercase">List Student</h3>
           </a>
-
-        </section>
-                
+        </section>  
       </main>
+      <div id="studentListOverlay" class="modal-overlay-student">
+        <div class="modal-content">
+            <span class="close" onclick="closeStudentListOverlay()">&times;</span>
+            <h3 class="text-strong text-size-16 text-line-height-1 margin-bottom-30 text-uppercase">[ID #] First Name Last Name (College Code) - Year lvl - Gender</h3>
+              <div class="scrollable-list">
+                  <ul id="studentListContent" style="color: white;"></ul>
+              </div>
+          </div>
+      </div>
+
+      <script>
+        function showStudentList() {
+          fetch('/studentlisttab')
+            .then(response => response.json())
+            .then(data => {
+              const studentListContent = document.getElementById("studentListContent");
+              studentListContent.innerHTML = "";
+              data.students.forEach(student => {
+                studentListContent.innerHTML += `<li>[${student[0]}] ${student[1]} ${student[2]} (${student[3]}) - ${student[4]} - ${student[5]}</li>`;
+              });
+              document.getElementById("studentListOverlay").style.display = "block";
+            })
+            .catch(error => console.error('Error:', error));
+        }
+
+        function closeStudentListOverlay() {
+          document.getElementById("studentListOverlay").style.display = "none";
+        }
+      </script>
    </body>
 </html>
