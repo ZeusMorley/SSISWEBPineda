@@ -15,15 +15,15 @@
       }
 
       function studenttab_open() {
-      window.open('http://127.0.0.1:5000/coursetab', '_self')
+      window.open('http://127.0.0.1:5000/studenttab', '_self')
       }
 
       document.addEventListener('DOMContentLoaded', function() {
-        document.querySelector('#collegeForm').addEventListener('submit', function(event) {
+        document.querySelector('#courseForm').addEventListener('submit', function(event) {
           event.preventDefault();
           const formData = new FormData(this);
 
-          fetch('/collegesubmitadd', {
+          fetch('/coursesubmitadd', {
             method: 'POST',
             body: formData,
           })
@@ -57,7 +57,7 @@
 
         setTimeout(function() {
             popup.style.display = "none";
-            window.location.reload(); // Reload the page
+            window.location.reload();
         }, 3000);
       }
 
@@ -100,7 +100,7 @@
           </a>
 
           <a class="s-12 m-6 l-3 padding-2x vertical-center margin-bottom background-color1">
-          <h3 class="text-strong text-size-20 text-line-height-1 margin-bottom-30 text-uppercase">First Name</h3>
+          <h3 class="text-strong text-size-20 text-line-height-1 margin-bottom-30 text-uppercase">Last Name</h3>
           <input type="text" name="studentlastname">
           </a>
 
