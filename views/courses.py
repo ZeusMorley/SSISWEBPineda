@@ -24,9 +24,9 @@ def addcourse():
     mysql = g.get('mysql', None)
     if request.method == 'POST' and mysql:
         cur = mysql.cursor()
-        course_code = request.form['coursecode']
+        course_code = request.form['coursecode'].upper()
         course_name = request.form['coursename']
-        college_code = request.form['collegecode']
+        college_code = request.form['collegecode'].upper()
         
         if not course_code:
             flashed_messages.append(("Course code cannot be empty", 'error')) 
@@ -71,7 +71,7 @@ def delete_course():
     mysql = g.get('mysql', None)
     if request.method == 'POST' and mysql:
         cur = mysql.cursor()
-        course_code = request.form['coursecode']
+        course_code = request.form['coursecode'].upper()
         
         if not course_code:
             flashed_messages.append(("Course code cannot be empty", 'error')) 
@@ -109,9 +109,9 @@ def edit_course():
     mysql = g.get('mysql', None)
     if request.method == 'POST' and mysql:
         cur = mysql.cursor()
-        course_code = request.form['coursecode']
+        course_code = request.form['coursecode'].upper()
         new_course_name = request.form['coursename']
-        new_college_code = request.form['collegecode']
+        new_college_code = request.form['collegecode'].upper()
         
         if not course_code:
             flashed_messages.append(("Course code is required.", 'error'))

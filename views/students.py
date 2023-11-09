@@ -29,9 +29,9 @@ def addstudent():
         student_id = request.form['studentid']
         student_first_name = request.form['studentfirstname']
         student_last_name = request.form['studentlastname']
-        course_code = request.form['coursecode']
+        course_code = request.form['coursecode'].upper()
         student_year_level = request.form['studentyearlvl']
-        student_gender = request.form['studentgender']
+        student_gender = request.form['studentgender'].upper()
         
         student_id_pattern = re.compile(r'^20[0-2][0-9]-\d{4}$')
 
@@ -126,9 +126,9 @@ def edit_student():
         student_id = request.form['studentid']
         new_student_first_name = request.form['studentfirstname']
         new_student_last_name = request.form['studentlastname']
-        new_course_code = request.form['coursecode']
+        new_course_code = request.form['coursecode'].upper()
         new_student_year_level = request.form['studentyearlevel']
-        new_student_gender = request.form['studentgender']
+        new_student_gender = request.form['studentgender'].upper()
 
         student_id_pattern = re.compile(r'^20[0-2][0-9]-\d{4}$')
 

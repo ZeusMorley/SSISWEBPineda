@@ -25,7 +25,7 @@ def addcollege():
     mysql = g.get('mysql', None)
     if request.method == 'POST' and mysql:
         cur = mysql.cursor()
-        college_code = request.form['collegecode']
+        college_code = request.form['collegecode'].upper()
         college_name = request.form['collegename']
 
         if not college_code:
@@ -64,7 +64,7 @@ def delete_college():
     mysql = g.get('mysql', None)
     if request.method == 'POST' and mysql:
         cur = mysql.cursor()
-        college_code = request.form['collegecode']
+        college_code = request.form['collegecode'].upper()
         
         if not college_code:
             flashed_messages.append(("College code cannot be empty", 'error'))
@@ -102,7 +102,7 @@ def edit_college():
     mysql = g.get('mysql', None)
     if request.method == 'POST' and mysql:
         cur = mysql.cursor()
-        college_code = request.form['collegecode']
+        college_code = request.form['collegecode'].upper()
         new_college_name = request.form['collegename']
         
         if not college_code:
